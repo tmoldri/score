@@ -26,4 +26,20 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get user cards
+     */
+    public function cards()
+    {
+        return $this->belongsToMany(Card::class)->withPivot(['total_points']);
+    }
+
+    /**
+     * Get user elements
+     */
+    public function elements()
+    {
+        return $this->belongsToMany(Element::class);
+    }
 }

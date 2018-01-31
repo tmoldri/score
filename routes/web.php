@@ -11,10 +11,19 @@
 |
 */
 
+//Authentication routes
+Auth::routes();
+
+//Main application routes
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//Card routes
+Route::get('/cards', 'CardController@index')->name('cards');
+Route::get('/card/create', 'CardController@create')->name('card.create');
+Route::post('/card/store', 'CardController@store')->name('card.store');
+Route::get('/card/{id}/create-element', 'CardController@createElement')->name('card.create.element');
+Route::post('/card/{id}/store-element', 'CardController@storeElement')->name('card.store.element');
+Route::get('/card/{id}', 'CardController@show')->name('card.show');
+Route::post('/card/{id}/score', 'CardController@score')->name('card.score');
