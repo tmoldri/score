@@ -8,4 +8,4 @@ Vendor, configuration and database files are already included in this project in
 You have to log into the application in order to see most of the functionality. The test user is already provided and is already selected when you got to the login page. You are free to register a new user if needed.
 
 # Live preview
-Coming soon...
+[Click here](https://laravel-3ura.frb.io/)
